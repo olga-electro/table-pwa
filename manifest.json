@@ -1,0 +1,23 @@
+{
+    "name": "100 Μέτρα Ανδρών 2021",
+    "short_name": "100 Μέτρα",
+    "start_url": "page.html",
+    "display": "standalone",
+    "background_colour": "#FFE9D2",
+    "theme_color": "#FFE1C4",
+    "orientation": "portrait-primary",
+    "icons": [
+        { 
+            "src": "./img/logo192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        { 
+            "src": "./img/logo512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+            
+        }
+    ]
+    
+}

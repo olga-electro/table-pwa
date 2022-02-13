@@ -1,0 +1,142 @@
+/* Typical properties start */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 22px;
+}
+
+header, nav, main, article, aside, footer {
+    padding: 10px;
+}
+
+/* Typical properties end */
+
+/* Colorize & Assign grid names */
+header {
+    grid-area: head;
+}
+
+main {
+    background-color: #eaeaea;
+    grid-area: main;
+    text-align: left;
+}
+
+article {
+    background-color: #eaeaea;
+    grid-area: news;
+}
+
+aside {
+    background-color: #eaeaea;
+    grid-area: link;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    grid-area: foot;
+}
+
+/* Header Style */
+header {
+    background-image: url(assets/track.jpg);
+    background-size: cover;
+    grid-area: head;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 0 0 5px #000000;
+    text-align: center;
+}
+
+/* Article and Aside Style */
+article h2,
+aside h2 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+}
+
+.center {
+    text-align: center;
+}
+
+article img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.links {
+    list-style: circle;
+}
+
+.links li {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+a {
+    color: #0058ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color :#6999f6;
+}
+
+/* Footer Style */
+footer {
+    text-align: center;
+}
+
+
+/* Grid container */
+body {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+        "head head head"
+        "main main main"
+        "main main main"
+        "news news link"
+        "foot foot foot";
+}
+
+/* 800px Breakpoint */
+@media all and (max-width: 800px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "head"
+            "main"
+            "news"
+            "link"
+            "foot";
+    }
+
+    article img {
+        width: 100%;
+        height: auto;
+    }
+}
